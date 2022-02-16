@@ -29,7 +29,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
 #Line below only required once, when creating DB. 
-# db.create_all()
+db.create_all()
 
 class LogIn(FlaskForm):
     name = StringField("name", validators=[DataRequired()])
