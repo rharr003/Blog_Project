@@ -11,8 +11,7 @@ import os
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'any-secret-key-you-choose'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uoodxcbzisjubm:d24060ab9ce74c473430dfd5c5071b2cea467199461661c32e5c' \
-                                        'c7909fd18735@ec2-18-215-8-186.compute-1.amazonaws.com:5432/d9m8ka3b460uha'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
